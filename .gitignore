@@ -28,10 +28,12 @@ yarn-error.log*
 lerna-debug.log*
 pnpm-debug.log*
 
-# Package manager lock files
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
+# Always track primary manifest files
+!package.json
+!package-lock.json
+!tsconfig.json
+
+# Package manager cache
 .pnpm-store/
 
 # Runtime data
@@ -881,6 +883,7 @@ venv.bak/
 # Data files
 *.csv
 *.json
+!package-lock.json
 *.xml
 *.parquet
 data/
